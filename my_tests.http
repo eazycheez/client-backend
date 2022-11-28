@@ -1,0 +1,27 @@
+@hostname= http://localhost:8000
+
+GET {{hostname}} HTTP/1.1
+
+###
+
+POST {{{{hostname}}}} HTTP/1.1
+Content-Type: application/application/json
+
+{
+    username: "elroy",
+    phone: "8050393508",
+    storeaddress:"mangalore",
+    storecategory:"type a"
+}
+
+###
+
+PUT {{hostname}} HTTP/1.1
+Content-Type: application/application/json
+
+{
+    username: "elroy",
+    phone: "8050393508",
+    storeaddress:"mangalore",
+    storecategory:"type a"
+}

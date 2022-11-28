@@ -33,6 +33,9 @@ app.use('/api/cart', checkAuth, require('./routes/cartRoutes'))
 //Route the  /api/cart/placeorder/:id requests to routes
 app.use('/api/placeorder', checkAuth, require('./routes/orderRoutes'))
 
+//Route the  /api/retailProfile/:id requests to routes
+app.use('/api/retailProfile',checkAuth, require('./routes/retailProfileRoutes'))
+
 //Overwrites the default Express Error Handler
 app.use(errorHandler)
 

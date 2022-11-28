@@ -17,6 +17,7 @@
     "firebase-token-generator": "^2.0.0",
     "joi": "^17.6.3",
     "mongoose": "^6.7.0",
-    "mongoose-type-url": "^2.1.0"
+    "mongoose-type-url": "^2.1.0",
+    "nodemon": "^2.0.20"
   }
 }

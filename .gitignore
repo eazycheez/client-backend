@@ -1,3 +1,4 @@
 node_modules
 .env
 phone-firebase-e6ae0-firebase-adminsdk-uk24t-3eba5f0258.json
+my_tests.http

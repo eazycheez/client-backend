@@ -6,7 +6,7 @@ require('mongoose-type-url')
 const itemSchema = mongoose.Schema({
     category:{
         type: mongoose.SchemaTypes.ObjectId,
-        ref : "Category",
+        ref : "Category"
     },
     name: { 
         type: String,

@@ -5,6 +5,6 @@ const router = express.Router()
 const { readOrder, createOrder } = require('../controller/orderController')
 
 //Use the one method to handle GET request
-router.route( '/:id' ).get(readOrder).post(createOrder)
+router.route( '/' ).get(readOrder).post(createOrder)
 
 module.exports = router

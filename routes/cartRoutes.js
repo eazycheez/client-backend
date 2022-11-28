@@ -5,6 +5,6 @@ const router = express.Router()
 const { getCart, putItem } = require('../controller/cartController')
 
 //Use the two methods to handle GET and PUT requests
-router.route( '/:id' ).get(getCart).put(putItem)
+router.route( '/' ).get(getCart).put(putItem)
 
 module.exports = router

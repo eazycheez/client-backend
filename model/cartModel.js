@@ -1,21 +1,21 @@
 
 const mongoose = require('mongoose')
-const Item = require('./itemModel')
 
-//Item Schema
+//Cart Schema
 const cartSchema = mongoose.Schema({
-    userID: {
-        Type: String
+    uid: {
+        type: String,
+        unique: true
     },
 
     address: {
-        Type: String
+        type: String
     },
 
     items: [{
-        itemID: {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : Item
+        itemid: {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref : "Item"
         },
         count: {
             type: Number

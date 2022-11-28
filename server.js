@@ -1,5 +1,4 @@
 const express = require('express')
-const { auth } = require('firebase-admin')
 const app = express()
 const dotenv = require('dotenv').config()
 const connectDB = require('./config/db')
@@ -7,9 +6,8 @@ const {errorHandler} = require('./middlewares/errorMiddleware')
 const checkAuth = require('./middlewares/firebaseValidation')
 
 //Firebase connection
-var admin = require("firebase-admin");
-
-var serviceAccount = require("../phone-firebase-e6ae0-firebase-adminsdk-uk24t-3eba5f0258.json")
+const admin = require("firebase-admin");
+const serviceAccount = require("./phone-firebase-e6ae0-firebase-adminsdk-uk24t-3eba5f0258.json")
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -32,6 +30,10 @@ app.use('/api/cart', checkAuth, require('./routes/cartRoutes'))
 
 //Route the  /api/cart/placeorder/:id requests to routes
 app.use('/api/placeorder', checkAuth, require('./routes/orderRoutes'))
+
+
+//Route the  /api/cart/placeorder/:id requests to routes
+app.use('/api/transactions', checkAuth, require('./routes/transactionsRoutes'))
 
 //Overwrites the default Express Error Handler
 app.use(errorHandler)
